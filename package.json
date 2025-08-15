@@ -6,7 +6,7 @@
   "scripts": {
     "build": "echo 'Building the project...'",
     "dev": "nodemon src/index",
-    "start": "node src/index"
+    "start": "yarn install && node src/index"
   },
   "keywords": [
     "express.js",
