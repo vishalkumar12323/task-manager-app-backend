@@ -1,9 +1,11 @@
+import dotenv from "dotenv";
 import express from "express";
 import passport from "passport";
 import jwt from "jsonwebtoken";
 import { protect } from "../middlewares/authMiddleware.js";
 import User from "../models/User.js";
 
+dotenv.config({ quiet: true });
 const router = express.Router();
 
 router.get("/user", protect, async (req, res) => {
@@ -44,7 +46,7 @@ router.get(
       path: "/",
     });
 
-    res.redirect("http://localhost:3000/home");
+    res.redirect(`${process.env.ALLOWED_ORIGIN}/home`);
   }
 );
 
