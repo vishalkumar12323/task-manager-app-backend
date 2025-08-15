@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "build": "echo 'Building the project...'",
     "dev": "nodemon src/index",
     "start": "node src/index"
   },
